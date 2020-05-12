@@ -9,9 +9,12 @@
 
                 // add this question and its answers to the output
                 output.push(
-                    `<div class="question"> ${currentQuestion.question} </div>
-          <div class="answers"> <input type="text" name="Frage ${questionNumber}"> </div>`
+                    `<div class="form-group row answers">
+                    <div class="col-12">
+                    <label for="Frage${questionNumber}" class="question"> ${currentQuestion.question} </label>
+                    <input type="text" class="form-control" id="Frage${questionNumber}" name="Frage${questionNumber}" required>  </div></div>`
                 );
+
             }
         );
 
@@ -40,6 +43,7 @@
 
                 // color the answers green
                 answerContainers[questionNumber].style.color = 'lightgreen';
+                answerContainers[questionNumber].style = ':valid';
             }
             // if answer is wrong or blank
             else{
@@ -58,6 +62,14 @@
     const myQuestions = [
         {
             question: "Was ist euer Ergebnis bei den M&Ms?",
+            correctAnswer: "42"
+        },
+        {
+            question: "Welche Botschaft sagt euch der Arduino?",
+            correctAnswer: "NEUN"
+        },
+        {
+            question: "Der Apfel fällt nicht weit vom Stamm...",
             correctAnswer: "42"
         }
     ];
