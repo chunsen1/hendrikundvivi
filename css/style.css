@@ -4,8 +4,8 @@ body{
     color: #333;
 }
 
-h1{
-    padding-bottom: 2rem;
+.unterschrift{
+    font-family: 'Lobster', sans-serif;
 }
 
 .question{

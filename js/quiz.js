@@ -12,7 +12,9 @@
                     `<div class="form-group row answers">
                     <div class="col-12">
                     <label for="Frage${questionNumber}" class="question"> ${currentQuestion.question} </label>
-                    <input type="text" class="form-control" id="Frage${questionNumber}" name="Frage${questionNumber}" required>  </div></div>`
+                    <input type="text" class="form-control" id="Frage${questionNumber}" name="Frage${questionNumber}" required><div class="invalid-feedback">
+          
+        </div>  </div></div>`
                 );
 
             }
@@ -25,7 +27,7 @@
     function showResults(){
 
         // gather answer containers from our quiz
-        const answerContainers = quizContainer.querySelectorAll('.answers > input');
+        const answerContainers = quizContainer.querySelectorAll('.answers');
 
         // keep track of user's answers
         let numCorrect = 0;
@@ -33,8 +35,17 @@
         // for each question...
         myQuestions.forEach( (currentQuestion, questionNumber) => {
 
+            let inputField = answerContainers[questionNumber].querySelector("input");
+            let divFeedback = answerContainers[questionNumber].querySelector("div.invalid-feedback");
+            divFeedback.innerHTML = "";
+
+            //reset validation status
+            inputField.classList.remove('is-valid');
+            inputField.classList.remove('is-invalid');
+
             // find selected answer
-            const answerInput = answerContainers[questionNumber].value;
+            const answerInput = inputField.value;
+            inputField.value = answerInput;
 
             // if answer is correct
             if(answerInput === currentQuestion.correctAnswer){
@@ -42,18 +53,22 @@
                 numCorrect++;
 
                 // color the answers green
-                answerContainers[questionNumber].style.color = 'lightgreen';
-                answerContainers[questionNumber].style = ':valid';
+                inputField.classList.add('is-valid');
             }
             // if answer is wrong or blank
             else{
                 // color the answers red
-                answerContainers[questionNumber].style.color = 'red';
+                inputField.classList.add('is-invalid');
+                divFeedback.innerHTML = currentQuestion.feedback;
             }
         });
 
+        if (numCorrect === myQuestions.length){
+            window.location.href = "glueckwunsch.html";
+        }
+
         // show number of correct answers out of total
-        resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+        resultsContainer.innerHTML = `<div class="col-12"> ${numCorrect} von ${myQuestions.length} </div>`;
     }
 
     const quizContainer = document.getElementById('quiz');
@@ -62,15 +77,18 @@
     const myQuestions = [
         {
             question: "Was ist euer Ergebnis bei den M&Ms?",
-            correctAnswer: "42"
+            correctAnswer: "42",
+            feedback: "ffffff"
         },
         {
             question: "Welche Botschaft sagt euch der Arduino?",
-            correctAnswer: "NEUN"
+            correctAnswer: "NEUN",
+            feedback: "fffffff"
         },
         {
             question: "Der Apfel fällt nicht weit vom Stamm...",
-            correctAnswer: "42"
+            correctAnswer: "42",
+            feedback: "fffffff"
         }
     ];
 

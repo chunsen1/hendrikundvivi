@@ -7,18 +7,40 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-grid.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster:300,400,500,700" type="text/css">
+
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Hendrik & Vivis Hochzeitsrätsel</title>
 </head>
 <body>
 
-<h1>Hendrik & Vivis Hochzeitsrätsel</h1>
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <h1 class="display-4">Hendrik & Vivis Hochzeitsrätsel</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <p class="lead">Lieber Hendrik, liebe Vivi, zu eurer Hochzeit wünschen wir euch nur das Beste!</p>
+                <p>Damit euch die Zeit bis September nicht zu lang wird, gibt es hier ein paar kleine Rätsel. Löst alle Rätsel und öffnet damit die Schatzkammer.</p>
+                <p class="unterschrift">Birgit & Christian</p>
+            </div>
+            <div class="col-md-5">
+                <figure style="padding-bottom: calc(300/553*100%); position: relative"><img src="/images/schatztruhe.jpg" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%"></figure>
+            </div>
+        </div>
+    </div>
+</div>
 
-<form>
+<div class="container">
     <div id="quiz"></div>
-    <button class="btn btn-primary btn-sm" id="submit">Submit Quiz</button>
-    <div id="results"></div>
-</form>
+    <div class="row">
+        <div class="col-12">
+            <button class="btn btn-primary btn-sm" id="submit">Antworten prüfen</button>
+        </div>
+    </div>
+    <div id="row results"></div>
+</div>
 
 
 <script src="js/quiz.js"></script>
