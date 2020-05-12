@@ -9,8 +9,8 @@
 
                 // add this question and its answers to the output
                 output.push(
-                    `<div class="form-group row answers">
-                    <div class="col-12">
+                    `<div class="form-group answers">
+                    <div class="col-md-12">
                     <label for="Frage${questionNumber}" class="question"> ${currentQuestion.question} </label>
                     <input type="text" class="form-control" id="Frage${questionNumber}" name="Frage${questionNumber}" required><div class="invalid-feedback">
           
@@ -68,7 +68,7 @@
         }
 
         // show number of correct answers out of total
-        resultsContainer.innerHTML = `<div class="col-12"> ${numCorrect} von ${myQuestions.length} </div>`;
+        resultsContainer.innerHTML = `<div class="col-md-12"> ${numCorrect} von ${myQuestions.length} </div>`;
     }
 
     const quizContainer = document.getElementById('quiz');
