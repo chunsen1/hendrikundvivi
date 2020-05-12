@@ -9,7 +9,7 @@
 
                 // add this question and its answers to the output
                 output.push(
-                    `<div class="form-group answers">
+                    `<div class="form-group answers row">
                     <div class="col-md-12">
                     <label for="Frage${questionNumber}" class="question"> ${currentQuestion.question} </label>
                     <input type="text" class="form-control" id="Frage${questionNumber}" name="Frage${questionNumber}" required><div class="invalid-feedback">
