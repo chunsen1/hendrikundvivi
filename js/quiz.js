@@ -106,7 +106,7 @@
         {
             question: "Winke ",
             correctAnswer: "Fibonacci",
-            feedback: "Seht genau hin."
+            feedback: "Leider nicht richtig."
         }
     ];
 
