@@ -11,7 +11,11 @@
                 output.push(
                     `<div class="form-group answers row">
                     <div class="col-md-12">
-                    <label for="Frage${questionNumber}" class="question"> ${currentQuestion.question} </label>
+                    <label for="Frage${questionNumber}" class="question"> ${currentQuestion.question}`);
+                if(questionNumber === 2){output.push(`<a href='mp-5ebc2d9cd2c89.mp3'>piep</a>`)};
+                if(questionNumber === 3){output.push(`<a href='images/baum.png'>Stamm</a>`)};
+                if(questionNumber === 5){output.push(`<a href='436-591-052.mp4'>winke</a>`)};
+                output.push(`</label>
                     <input type="text" class="form-control" id="Frage${questionNumber}" name="Frage${questionNumber}" required><div class="invalid-feedback">
           
         </div>  </div></div>`
@@ -80,17 +84,17 @@
             feedback: "Leider nicht richtig."
         },
         {
-            question: "Was ist euer Ergebnis bei den M&Ms?",
-            correctAnswer: "42",
+            question: "Habt ihr die Nuss geknackt?",
+            correctAnswer: "7",
             feedback: "Leider nicht richtig."
         },
         {
-            question: "Welche Botschaft sagt euch der Arduino?",
-            correctAnswer: "NEUN",
+            question: "Piep piep ",
+            correctAnswer: "ACI",
             feedback: "Leider nicht richtig."
         },
         {
-            question: "Der Apfel fällt nicht weit vom Stamm.",
+            question: "Der Apfel fällt nicht weit vom ",
             correctAnswer: "Das Edelste an der Liebe ist das Vertrauen zueinander",
             feedback: "Leider nicht richtig."
         },
@@ -100,7 +104,7 @@
             feedback: "Leider nicht richtig."
         },
         {
-            question: "Winke winke",
+            question: "Winke ",
             correctAnswer: "Fibonacci",
             feedback: "Seht genau hin."
         }
