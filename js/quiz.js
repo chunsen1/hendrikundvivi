@@ -75,20 +75,34 @@
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
     const myQuestions = [
+        {   question: "Die Post wüsste es.",
+            correctAnswer: "38723",
+            feedback: "Leider nicht richtig."
+        },
         {
             question: "Was ist euer Ergebnis bei den M&Ms?",
             correctAnswer: "42",
-            feedback: "ffffff"
+            feedback: "Leider nicht richtig."
         },
         {
             question: "Welche Botschaft sagt euch der Arduino?",
             correctAnswer: "NEUN",
-            feedback: "fffffff"
+            feedback: "Leider nicht richtig."
         },
         {
-            question: "Der Apfel fällt nicht weit vom Stamm...",
-            correctAnswer: "42",
-            feedback: "fffffff"
+            question: "Der Apfel fällt nicht weit vom Stamm.",
+            correctAnswer: "Das Edelste an der Liebe ist das Vertrauen zueinander",
+            feedback: "Leider nicht richtig."
+        },
+        {
+            question: "Lutherbibel 1984",
+            correctAnswer: "Liebe",
+            feedback: "Leider nicht richtig."
+        },
+        {
+            question: "Winke winke",
+            correctAnswer: "Fibonacci",
+            feedback: "Seht genau hin."
         }
     ];
 
