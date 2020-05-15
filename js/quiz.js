@@ -85,7 +85,7 @@
         },
         {
             question: "Habt ihr die Nuss geknackt?",
-            correctAnswer: "7",
+            correctAnswer: "16.05.2020",
             feedback: "Leider nicht richtig."
         },
         {
