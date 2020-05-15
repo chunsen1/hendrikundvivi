@@ -14,7 +14,7 @@
                     <label for="Frage${questionNumber}" class="question"> ${currentQuestion.question}`);
                 if(questionNumber === 2){output.push(`<a href='mp-5ebc2d9cd2c89.mp3'>piep</a>`)};
                 if(questionNumber === 3){output.push(`<a href='images/baum.png'>Stamm</a>`)};
-                if(questionNumber === 5){output.push(`<a href='436-591-052.mp4'>winke</a>`)};
+                if(questionNumber === 5){output.push(`<a href='winkewinke.m4v'>winke</a>`)};
                 output.push(`</label>
                     <input type="text" class="form-control" id="Frage${questionNumber}" name="Frage${questionNumber}" required><div class="invalid-feedback">
           
