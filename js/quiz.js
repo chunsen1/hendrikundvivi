@@ -91,7 +91,7 @@
         {
             question: "Piep piep ",
             correctAnswer: "ACI",
-            feedback: "Leider nicht richtig."
+            feedback: "Leider nicht richtig. Gesucht wird eine Abkürzung."
         },
         {
             question: "Der Apfel fällt nicht weit vom ",
